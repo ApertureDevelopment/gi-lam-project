@@ -4,26 +4,27 @@ zahlen = [4, 23, 8, 13, 7, 9, 42, 11, 6, 80, 3]
 
 # Sortierfunktion
 def minisort(sortZahlen):
-    counter = 1 #irgendein wert über 0
+    doSort = True
 
-    while counter >0:
-        counter = 0
+    while doSort:
+        doSort = False
         i = 0
         for i in range(len(sortZahlen)-1):
 
 
-            zahlA = sortZahlen[i];
-            zahlB = sortZahlen[i+1];
+            zahlA = sortZahlen[i]
+            zahlB = sortZahlen[i+1]
             if zahlA>zahlB:
-                    counter = counter + 1
+                    doSort = True
                     sortZahlen[i+1]=zahlA
                     sortZahlen[i]=zahlB
-    print('Rückgabe:')
     return sortZahlen
+
 
 
 print(zahlen)
 zahlen = minisort(zahlen)
+print ('Sortierte Zahlenfolge:')
 print(zahlen)
 
 
