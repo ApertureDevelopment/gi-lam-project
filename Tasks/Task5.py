@@ -6,7 +6,7 @@ def array_median(array):
     tempArray.sort()
 
     middle = len(array) / 2
-    if tempArray % 2 != 0:
+    if len(array) % 2 != 0:
         middle = math.ceil(middle)
         return tempArray[middle]
     else:

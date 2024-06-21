@@ -1,7 +1,10 @@
-def durchschnitt(liste):
-    summe = 0.0
-    zähler = 0
-    for zahl in liste:
-        summe = summe + zahl
-        zähler = zähler + 1
-    return summe / zähler
+from decimal import *
+
+
+def array_avg(liste):
+    sum = 0
+    counter = 0
+    for number in liste:
+        sum = sum + number
+        counter = counter + 1
+    return Decimal(sum) / Decimal(counter)

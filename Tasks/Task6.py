@@ -1,7 +1,3 @@
-# die vorgegebene Zahlenfolge:
-zahlen = [4, 23, 8, 13, 7, 9, 42, 11, 6, 80, 3]
-
-
 # Sortierfunktion
 def minisort(sortZahlen):
     doSort = True
@@ -21,20 +17,21 @@ def minisort(sortZahlen):
     return sortZahlen
 
 
+# Alternative approach
+def swap(array, iterA, iterB):
+    temp = array[iterA]
+    array[iterA] = array[iterB]
+    array[iterB] = temp
 
-print(zahlen)
-zahlen = minisort(zahlen)
-print ('Sortierte Zahlenfolge:')
-print(zahlen)
+def altSort(array):
+    iter = 0
+    array_length = len(array)
 
-
-
-
-
-
-
-
-
-
-
-#sort(zahlen)
+    while iter < array_length:
+        if i + 1 == array_length: return;
+        if array[i] > array[i + 1]:
+            swap(array, i, i + 1)
+            if(i > 0):
+                i = i - 1
+        else:
+            i = i + 1

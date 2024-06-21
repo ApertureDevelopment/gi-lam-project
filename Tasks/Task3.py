@@ -1,5 +1,5 @@
-def summe(liste):
-    summe = 0
-    for zahl in liste:
-        summe = summe + zahl
-    return summe
+def array_sum(liste):
+    sum = 0
+    for number in liste:
+        sum = sum + number
+    return sum
